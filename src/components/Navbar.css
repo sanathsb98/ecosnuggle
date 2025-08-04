@@ -1,0 +1,47 @@
+
+.navbar-section {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;;
+    background-color: #FFFFFF;
+}
+
+.navbar-content{
+    background-color: #FFFFFF;
+    width: 100%;
+    color: black;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Montserrat";
+}
+.logo{
+    width: 124px;
+    height: 64px;
+    cursor: pointer;
+}
+.navbar-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-links{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.navbar-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-link,.gift-logo{
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.navbar-link:hover,.gift-logo:hover{
+    color: var(--secondary-color);
+}

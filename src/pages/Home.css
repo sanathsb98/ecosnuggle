@@ -1,0 +1,34 @@
+/* All screens */
+.home-banner {
+  width: 100%;
+  height: auto;
+  display: none; /* By default, hide all images */
+  background-size: cover;
+}
+
+/* Desktop: 1024px and above */
+@media screen and (min-width: 1024px) {
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* Tablet: 700px to 1023px */
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+  .tab-only {
+    display: block;
+  }
+}
+
+/* Mobile: 0px to 699px */
+@media screen and (max-width: 699px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
+
+
+
+
+
