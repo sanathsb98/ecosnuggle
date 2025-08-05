@@ -1,46 +1,80 @@
-.reel-section-container{
-    background-color: #F3F2F2;
-    padding: 56px 60px;
+.reel-section-container {
+  background-color: #f3f2f2;
+  padding: 56px 60px;
+  overflow: hidden;
 }
+
 .reel-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Montserrat";
-    gap: 56px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  font-family: "Montserrat";
 }
-.reel-titledes{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
+
+.reel-titledes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
 }
-.reel-section-title{
-    font-size: 48px;
-    font-weight: 600;
-    color: var(--primary-color);
+
+.reel-section-title {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--primary-color);
 }
-.reel-section-description{
-    font-size: 26px;
-    font-weight: 400;
-    color: var(--text-color);
+
+.reel-section-description {
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--text-color);
 }
-.reel-section-button{
-    font-size: 24px;
-    font-weight: 500;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 8px 16px;
-    cursor: pointer;
+
+.reel-section-button {
+  font-size: 24px;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
 }
-.reel-section-content{
-    display: flex;
-    gap: 30px;
+
+.reel-section-content {
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  scroll-behavior: auto;
+  scrollbar-width: none;
 }
-.reel-image{
-    cursor: pointer;
-    width: 100%;
-    max-width: 350px;
+
+.reel-video {
+  flex: 0 0 auto;
+  width: 320px;
+}
+
+.reel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 880px) {
+ 
+
+  .reel-section-content {
+    width: 100vw;
+    margin-right: 0;
+    padding-right: 0;
+    overflow-x: auto;
+  }
+
+  .reel-section {
+    padding-right: 0;
+  }
 }
