@@ -84,7 +84,19 @@
 .product-box-btn:hover{
 background-color: var(--secondary-color);
 }
-
+@media screen and (max-width: 880px) {
+.our-products-title{
+    text-align: left;
+    width: 100%;
+}
+.our-products-description{
+    text-align: left;
+}
+.our-products-section{
+    gap: 36px;
+}
+    
+}
 @media screen and (max-width: 780px) {
     .our-product-collections {
         flex-direction: column;
@@ -94,9 +106,36 @@ background-color: var(--secondary-color);
     .product-image-img {
         max-width: 100%;
     }
+    
 }
 @media screen and (max-width: 550px) {
   .our-products-container{
     padding: 70px 20px;
+}
+.product-box-title{
+    font-size: 20px;
+    text-align: left;
+}
+.our-products-title{
+    font-size: 26px;
+}
+.our-products-description{
+    font-size: 18px;
+}
+.our-products-section{
+gap: 32px;
+}
+.product-box-description{
+    font-size: 18px;
+    text-align: left;
+}
+.product-box-price{
+    font-size: 16px;
+}
+.product-box-btn{
+    font-size: 18px;
+}
+.product-box-pricing{
+  justify-content: flex-start;
 }
 }
