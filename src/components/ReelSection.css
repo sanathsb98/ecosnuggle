@@ -39,6 +39,12 @@
   color: #fff;
   padding: 8px 16px;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
 }
 
 .reel-section-content {
@@ -62,7 +68,16 @@
   border-radius: 8px;
   cursor: pointer;
 }
-
+.instgram-logo {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+.insta-logo{
+      display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (max-width: 880px) {
  
@@ -77,4 +92,21 @@
   .reel-section {
     padding-right: 0;
   }
+}
+@media screen and (max-width: 550px) {
+ .reel-section-button{
+    font-size: 18px;
+ }
+ .reel-section-title{
+    font-size: 26px;
+ }
+ .reel-section-description{
+    font-size: 18px;
+ }
+ .reel-section-container{
+    padding: 46px 20px;
+ }
+ .reel-titledes{
+    gap: 24px;
+ }
 }

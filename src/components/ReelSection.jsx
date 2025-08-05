@@ -3,6 +3,7 @@ import './ReelSection.css';
 import story1 from '../assets/story1.png';
 import story2 from '../assets/story2.png';
 import story3 from '../assets/story3.png';
+import instagramlogo from '../assets/instagram-logo.svg';
 
 const ReelSection = () => {
   const scrollRef = useRef(null);
@@ -64,7 +65,10 @@ const ReelSection = () => {
           ))}
         </div>
 
-        <div className="reel-section-button">Follow us on Instagram</div>
+        <div className="reel-section-button">
+            <div>Follow us on Insta</div>
+            <div className='insta-logo'><img src={instagramlogo} alt="Instagram Logo" className="instagram-logo" /></div>
+        </div>
       </div>
     </div>
   );
