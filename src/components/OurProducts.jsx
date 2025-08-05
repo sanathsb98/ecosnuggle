@@ -20,7 +20,7 @@ const OurProducts = () => {
         },
         {
             image: product3,
-            title: 'CloudKiss - Essentials',
+            title: 'CloudKiss - Essentials Trio',
             description: 'Soft hues. comfort.',
             price: '$ Price to be revealed soon',
         }

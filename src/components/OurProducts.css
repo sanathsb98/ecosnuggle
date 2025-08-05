@@ -84,3 +84,19 @@
 .product-box-btn:hover{
 background-color: var(--secondary-color);
 }
+
+@media screen and (max-width: 780px) {
+    .our-product-collections {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .product-image-img {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 550px) {
+  .our-products-container{
+    padding: 70px 20px;
+}
+}
