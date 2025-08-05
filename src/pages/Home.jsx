@@ -8,6 +8,7 @@ import OurProducts from '../components/OurProducts';
 import OurSpeciality from '../components/OurSpeciality';
 import OurStory from '../components/OurStory';
 import ReelSection from '../components/ReelSection';
+import FaqSection from '../components/FaqSection';
 
 const Home = () => {
   return (
@@ -39,6 +40,7 @@ const Home = () => {
       <OurSpeciality/>
       <OurStory/>
       <ReelSection/>
+      <FaqSection/>
     </div>
   );
 };
