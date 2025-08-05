@@ -51,20 +51,7 @@
   z-index: 1;
 }
 
-/* Use navbar's layout system for alignment */
-.navbar-container.container {
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
 
-.navbar-content.maxscreenlimit {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 /* Text block */
 .home-text {
