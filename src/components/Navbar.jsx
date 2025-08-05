@@ -3,6 +3,7 @@ import './Navbar.css';
 import logo from '../assets/logo.svg';
 import gift from '../assets/gift.svg';
 import ScrollBanner from './ScrollBanner';
+import burgerMenu from '../assets/burger-menu.svg';
 
 const Navbar = () => {
     return (
@@ -11,6 +12,9 @@ const Navbar = () => {
         <div className='navbar-container container'>
             
             <div className='navbar-content maxscreenlimit'>
+                <div className='navbar-burger-menu'>
+                    <img src={burgerMenu} alt='burger-menu' className='burger-menu' />
+                </div>
                 <div className='navbar-left'>
                     <img src={logo} alt='logo' className='logo' />
                 </div>
