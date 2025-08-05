@@ -5,6 +5,7 @@ import homeBannerDesktop from '../assets/home-banner.png';
 import homeBannerTablet from '../assets/home-tab-banner.png';
 import homeBannerMobile from '../assets/home-mobile-banner.png';
 import OurProducts from '../components/OurProducts';
+import OurSpeciality from '../components/OurSpeciality';
 
 const Home = () => {
   return (
@@ -33,6 +34,7 @@ const Home = () => {
         </div>
       </div>
       <OurProducts/>
+      <OurSpeciality/>
     </div>
   );
 };
