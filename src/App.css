@@ -24,6 +24,7 @@
   --primary-color:#455F2C;
   --secondary-color:#8C9C72;
   --text-color:#455F2C;
+  --pill-color:#B3767C;
 }
 
 @media screen and (max-width: 550px) {
