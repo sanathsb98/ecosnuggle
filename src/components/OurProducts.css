@@ -30,6 +30,7 @@
     font-weight: 400;
     text-align: center;
     color: var(--text-color);
+    line-height: 150%;
 }
 .product-image-img{
     width: 100%;
@@ -110,7 +111,7 @@ background-color: var(--secondary-color);
 }
 @media screen and (max-width: 550px) {
   .our-products-container{
-    padding: 70px 20px;
+    padding: 60px 20px;
 }
 .product-box-title{
     font-size: 20px;
