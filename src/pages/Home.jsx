@@ -7,6 +7,7 @@ import homeBannerMobile from '../assets/home-mobile-banner.png';
 import OurProducts from '../components/OurProducts';
 import OurSpeciality from '../components/OurSpeciality';
 import OurStory from '../components/OurStory';
+import ReelSection from '../components/ReelSection';
 
 const Home = () => {
   return (
@@ -37,6 +38,7 @@ const Home = () => {
       <OurProducts/>
       <OurSpeciality/>
       <OurStory/>
+      <ReelSection/>
     </div>
   );
 };

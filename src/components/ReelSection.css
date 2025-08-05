@@ -1,0 +1,46 @@
+.reel-section-container{
+    background-color: #F3F2F2;
+    padding: 56px 60px;
+}
+.reel-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+    gap: 56px; 
+}
+.reel-titledes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+.reel-section-title{
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.reel-section-description{
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.reel-section-button{
+    font-size: 24px;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+.reel-section-content{
+    display: flex;
+    gap: 30px;
+}
+.reel-image{
+    cursor: pointer;
+    width: 100%;
+    max-width: 350px;
+}
