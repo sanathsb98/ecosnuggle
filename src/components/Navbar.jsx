@@ -37,6 +37,7 @@ const Navbar = () => {
                 </div>
             </div>
 
+
             {/* Mobile Dropdown Menu */}
             <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
                 <div className="mobile-menu-header">
