@@ -16,7 +16,7 @@ import wegiveback from '../assets/we-give-back.svg';
 
 const Home = () => {
   return (
-    <div className="home-page-container">
+    <div  className="home-page-container">
       <div className="home-banner-wrapper">
         <img src={homeBannerDesktop} alt="Home Banner Desktop" className="home-banner desktop" />
         <img src={homeBannerTablet} alt="Home Banner Tablet" className="home-banner tablet" />

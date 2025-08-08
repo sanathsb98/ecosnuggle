@@ -26,7 +26,7 @@ const OurProducts = () => {
         }
     ]
     return (
-        <div className='our-products-container container'>
+        <div id="new-drops" className='our-products-container container'>
             <div className='our-products-section maxscreenlimit'>
                 <div className='our-products-title'>A First Look at What’s Coming</div>
                 <div className='our-products-description'>Here’s a sneak peek at our upcoming collection - soft, sustainable essentials designed for your newborn’s comfort and your peace of mind. Be the first to know when we launch.</div>

@@ -3,11 +3,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import OurStory from './pages/OurStory'
+import ScrollToTop from './components/ScrollToTop'
+import ScrollToSection from './components/ScrollToSection'
 
 function App() {
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop/>
+      <ScrollToSection/>
        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
