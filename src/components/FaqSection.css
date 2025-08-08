@@ -1,7 +1,9 @@
 .faq-container {
   background-color: #8a9a6e; /* your greenish background */
   color: white;
-  padding: 60px 20px;
+  padding: 60px 60px;
+  display: flex;
+  justify-content: center;
 }
 
 .faq-section {
@@ -87,5 +89,8 @@
 
   .faq-answer p {
     font-size: 16px;
+  }
+  .faq-container{
+    padding: 60px 20px;
   }
 }

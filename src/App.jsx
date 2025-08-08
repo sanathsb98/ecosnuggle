@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import OurStory from './pages/OurStory'
 import ScrollToTop from './components/ScrollToTop'
 import ScrollToSection from './components/ScrollToSection'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/our-story" element={<OurStory />} />
           {/* Add other routes as needed */}
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   )
