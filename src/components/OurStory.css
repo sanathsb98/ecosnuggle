@@ -14,6 +14,7 @@
 .mobtitle{
     display: none;
     font-family: "Montserrat";
+    text-align: center;
 }
 .our-story-content{
     width: 100%;
@@ -69,7 +70,7 @@
         align-items: center;
     }
 .our-story-container{
-    padding: 60px 20px;
+    padding: 32px 20px;
 }
 .our-story-title{
 font-size: 26px;
@@ -88,7 +89,7 @@ text-align: center;
 width: 100%;
 }
 .mobtitle{
-    display: flex;
+    display: block
 }
 .desktitle{
     display: none;

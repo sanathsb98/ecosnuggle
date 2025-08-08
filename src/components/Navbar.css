@@ -48,6 +48,7 @@
     font-size: 16px;
     color: var(--primary-color);
     font-weight: 600;
+     text-decoration: none;
 }
 .navbar-link:hover,
 .gift-logo:hover {
@@ -110,6 +111,7 @@
     cursor: pointer;
     color: white;
     font-size: 32px;
+    text-decoration: none;
 }
 
 /* Show mobile menu only on small screens */

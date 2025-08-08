@@ -1,0 +1,24 @@
+.our-story-container{
+     width: 100%;
+}
+.story-banner-wrapper{
+    width: 100%;
+    position: relative;
+}
+.baby-banner{
+    width: 100%;
+    height: auto;
+}
+.baby-banner-mobile{
+    display: none;
+    width: 100%;
+}
+
+ @media screen and (max-width: 550px) {
+.baby-banner-mobile{
+    display: block;
+}
+.baby-banner{
+    display: none;
+}
+ }

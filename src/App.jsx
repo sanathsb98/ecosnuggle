@@ -1,15 +1,23 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
+import OurStory from './pages/OurStory'
 
 function App() {
-  
   return (
     <>
-      <Navbar/>
-      <Home/>
+      <BrowserRouter>
+       <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/our-story" element={<OurStory />} />
+          {/* Add other routes as needed */}
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
 
 export default App
+

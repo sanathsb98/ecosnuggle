@@ -5,9 +5,11 @@ import gift from '../assets/gift.svg';
 import ScrollBanner from './ScrollBanner';
 import burgerMenu from '../assets/burger-menu.svg';
 import closeIcon from '../assets/gift.svg'; // You'll need a close icon SVG
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
     return (
         <div className='navbar-section'>
@@ -17,15 +19,16 @@ const Navbar = () => {
                     <div className='navbar-burger-menu' onClick={() => setIsMenuOpen(true)}>
                         <img src={burgerMenu} alt='burger-menu' className='burger-menu' />
                     </div>
-                    <div className='navbar-left'>
+                    <Link to="/" className='navbar-left'>
                         <img src={logo} alt='logo' className='logo' />
-                    </div>
+                    </Link>
                     <div className='navbar-center'>
                         <div className='navbar-links'>
                             <div className='navbar-link'>New Drops</div>
-                            <div className='navbar-link'>Our Story</div>
+                            <Link to="our-story" className='navbar-link'>Our Story</Link>
                             <div className='navbar-link'>Benifits</div>
                             <div className='navbar-link'>Contact</div>
+                            
                         </div>
                     </div>
                     <div className='navbar-right'>
@@ -40,10 +43,11 @@ const Navbar = () => {
                     <img src={closeIcon} alt="close" className="close-icon" onClick={() => setIsMenuOpen(false)} />
                 </div>
                 <div className="mobile-menu-links">
-                    <div className='mobile-link'>New Drops</div>
-                    <div className='mobile-link'>Our Story</div>
-                    <div className='mobile-link'>Benifits</div>
-                    <div className='mobile-link'>Contact</div>
+                     <Link to="/" className='mobile-link' onClick={() => setIsMenuOpen(false)}>Home</Link>
+                    <div className='mobile-link' onClick={() => setIsMenuOpen(false)}>New Drops</div>
+                    <Link to="our-story" className='mobile-link' onClick={() => setIsMenuOpen(false)}>Our Story</Link>
+                    <div className='mobile-link' onClick={() => setIsMenuOpen(false)}>Benifits</div>
+                    <div className='mobile-link' onClick={() => setIsMenuOpen(false)}>Contact</div>
                 </div>
             </div>
         </div>

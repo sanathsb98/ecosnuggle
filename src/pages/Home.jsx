@@ -9,6 +9,10 @@ import OurSpeciality from '../components/OurSpeciality';
 import OurStory from '../components/OurStory';
 import ReelSection from '../components/ReelSection';
 import FaqSection from '../components/FaqSection';
+import ourstoryimage from '../assets/our-story-image.png';
+import echofriendly from '../assets/echo-friendly.svg';
+import babysafe from '../assets/baby-safe.svg';
+import wegiveback from '../assets/we-give-back.svg';
 
 const Home = () => {
   return (
@@ -37,8 +41,32 @@ const Home = () => {
         </div>
       </div>
       <OurProducts/>
-      <OurSpeciality/>
-      <OurStory/>
+      <OurSpeciality
+      title=""
+      features={[
+        {
+                  image: echofriendly,
+                  title: 'Eco-friendly fabrics',
+                  description: 'Chemical-free for pure, breathable comfort.',
+              },
+              {
+                  image: babysafe,
+                  title: 'Baby-safe materials',
+                  description: 'Gentle on your baby’s skin, safe for snuggles.',
+              },
+              {
+                  image: wegiveback,
+                  title: 'We give back',
+                  description: 'A portion of every purchase supports newborn care initiatives.',
+              }
+      ]}      />
+      <OurStory
+       title="Born from Sleepless Nights, Built with Heart"
+       description="We’re two sisters - and moms - who turned our late-night struggles into something meaningful.<br/><br/>
+       Eco Snuggle was created to bring breathable, skin-loving, and eco-conscious swaddles to families like yours. Each blanket is thoughtfully made for your baby’s comfort-and another baby’s care."
+       image={ourstoryimage}
+         buttonText={"Read Our Story"}
+      />
       <ReelSection/>
       <FaqSection/>
     </div>
