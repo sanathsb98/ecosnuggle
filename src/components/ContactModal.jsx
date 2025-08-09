@@ -53,7 +53,7 @@ const ContactModal = ({ onClose }) => {
     const result = await sendContactEmail(emailData);
 
     if (result.success) {
-      setSubmitMessage("✅ ecosuggle baby received your enquiry! We will contact you shortly");
+      setSubmitMessage("✅ Thanks for registering your intrest! We’ll notify you soon.");
       setEmailData({ name: "", email: "", phone: "", message: "", whatsapp: false });
       setTouched({ name: false, email: false, phone: false }); // Reset touched so errors don't show
     } else {
