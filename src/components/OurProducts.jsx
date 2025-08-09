@@ -3,6 +3,8 @@ import './OurProducts.css';
 import product1 from '../assets/product1.png';
 import product2 from '../assets/product2.png';
 import product3 from '../assets/product3.png';
+import whale from '../assets/whale.svg';
+import flower from '../assets/flower.svg';
 
 const OurProducts = ({openModal}) => {
     const productData = [
@@ -30,6 +32,7 @@ const OurProducts = ({openModal}) => {
             <div className='our-products-section maxscreenlimit'>
                 <div className='our-products-title'>A First Look at What’s Coming</div>
                 <div className='our-products-description'>Here’s a sneak peek at our upcoming collection - soft, sustainable essentials designed for your newborn’s comfort and your peace of mind. Be the first to know when we launch.</div>
+              
                 <div className='our-product-collections'>
                     {productData.map((product, index) => (
                         <div className='product-box' key={index}>

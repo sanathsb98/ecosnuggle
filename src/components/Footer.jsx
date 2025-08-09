@@ -58,7 +58,7 @@ const Footer = () => {
                         <div className='footer-social'>
                             <div className='footer-heading'>FOLLOW US ON</div>
                             <div className='social-icons'>
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.instagram.com/p/DKC1RrGgEHR/" target="_blank" rel="noopener noreferrer">
                                     <img src={instagramIcon} alt="Instagram" />
                                 </a>
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">

@@ -8,12 +8,14 @@
     align-items: center;
     font-family: "Montserrat";
     gap: 32px;
+    overflow: hidden;
     
 }
 .product-box{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    z-index: 1;
 }
 .our-product-collections{
     display: flex;
@@ -87,6 +89,8 @@
 .product-box-btn:hover{
 background-color: var(--secondary-color);
 }
+
+
 @media screen and (max-width: 880px) {
 .our-products-title{
     text-align: left;
@@ -113,7 +117,7 @@ background-color: var(--secondary-color);
 }
 @media screen and (max-width: 550px) {
   .our-products-container{
-    padding: 60px 20px;
+    padding: 40px 20px;
 }
 .product-box-title{
     font-size: 20px;
@@ -126,7 +130,7 @@ background-color: var(--secondary-color);
     font-size: 18px;
 }
 .our-products-section{
-gap: 32px;
+gap: 24px;
 }
 .product-box-description{
     font-size: 18px;
@@ -140,5 +144,16 @@ gap: 32px;
 }
 .product-box-pricing{
   justify-content: flex-start;
+}
+.our-product-collections{
+    margin-top: 16px;
+    gap: 40px;
+}
+.feature-image-box .feature-image{
+    width: 100%;
+    max-width: 138px;
+}
+.our-story-image-img{
+    margin-top: -8px;
 }
 }

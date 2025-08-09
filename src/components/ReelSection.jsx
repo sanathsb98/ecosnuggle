@@ -9,9 +9,9 @@ const ReelSection = () => {
   const scrollRef = useRef(null);
 
   const stories = [
-    { story: story1, link: 'https://www.instagram.com/yourpage1' },
-    { story: story2, link: 'https://www.instagram.com/yourpage2' },
-    { story: story3, link: 'https://www.instagram.com/yourpage3' },
+    { story: story1, link: 'https://www.instagram.com/reel/DMxcToasa6d/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' },
+    { story: story2, link: 'https://www.instagram.com/reel/DMnlVcSsdlU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' },
+    { story: story3, link: 'https://www.instagram.com/reel/DLsS_JzSKPK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' },
   ];
 
   useEffect(() => {
@@ -56,16 +56,19 @@ const ReelSection = () => {
         <div className="reel-section-content" ref={scrollRef}>
           {stories.map((story, index) => (
             <div className="reel-video" key={index}>
-              <img
-                src={story.story}
-                alt={`Reel ${index}`}
-                className="reel-image"
-              />
+              <a href={story.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={story.story}
+                  alt={`Reel ${index}`}
+                  className="reel-image"
+                />
+              </a>
             </div>
           ))}
         </div>
 
-        <div className="reel-section-button">
+          
+        <div  onClick={() => window.open("https://www.instagram.com/ecosnugglebaby/reels/", "_blank")} className="reel-section-button">
             <div>Follow us on Insta</div>
             <div className='insta-logo'><img src={instagramlogo} alt="Instagram Logo" className="instagram-logo" /></div>
         </div>

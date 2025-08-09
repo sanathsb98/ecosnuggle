@@ -94,7 +94,7 @@ flex-direction: row;
 
 .footer-bottom {
     border-top: 1px solid #ccc;
-    padding: 38px 0;
+    padding: 38px 0px 0px 0px;
     text-align: center;
     font-size: 16px;
     color: var(--primary-color);
@@ -125,6 +125,9 @@ flex-direction: row;
 .footer-bottom{
     font-size: 12px;
     text-align: left;
+}
+.footer-heading{
+    font-size: 18px;
 }
 
  }
