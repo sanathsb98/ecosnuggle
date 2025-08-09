@@ -34,21 +34,38 @@ const OurProducts = ({openModal}) => {
                 <div className='our-products-description'>Here’s a sneak peek at our upcoming collection - soft, sustainable essentials designed for your newborn’s comfort and your peace of mind. Be the first to know when we launch.</div>
               
                 <div className='our-product-collections'>
-                    {productData.map((product, index) => (
-                        <div className='product-box' key={index}>
-                            <div className='product-image'>
-                                <img src={product.image} alt='Product 1' className='product-image-img' />
-                            </div>
-                            <div className='product-box-title'>{product.title}</div>
-                            <div className='product-box-description'>{product.description}</div>
-                            <div className='product-box-pricing'>
-                                <div className='product-box-price'>{product.price}</div>
-                                <div className='product-box-pill'>GET EXTRA OFF</div>
-                            </div>
-                            <div onClick={()=>{openModal()}} className='product-box-btn'>Notify Me</div>
-                        </div>
-                    ))}
-                </div>
+{productData.map((product, index) => (
+  <div className='product-box' key={index}>
+    {/* Whale for first card (desktop) */}
+    {index === 0 && (
+      <img src={whale} alt="Whale Icon" className="bg-image whale desktop-only" />
+    )}
+
+    {/* Flower for first card (mobile < 780px) */}
+    {index === 0 && (
+      <img src={flower} alt="Flower Icon" className="bg-image flower mobile-only mobflower" />
+    )}
+
+    {/* Flower behind third card always */}
+    {index === 2 && (
+      <img src={flower} alt="Flower Icon" className="bg-image flower desk-tab-only" />
+    )}
+
+    <div className='product-image'>
+      <img src={product.image} alt={product.title} className='product-image-img' />
+    </div>
+    <div className='product-box-title'>{product.title}</div>
+    <div className='product-box-description'>{product.description}</div>
+    <div className='product-box-pricing'>
+      <div className='product-box-price'>{product.price}</div>
+      <div className='product-box-pill'>GET EXTRA OFF</div>
+    </div>
+    <div onClick={() => openModal()} className='product-box-btn'>Notify Me</div>
+  </div>
+))}
+
+</div>
+
             </div>
         </div>
     )
