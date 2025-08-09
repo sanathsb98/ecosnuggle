@@ -9,7 +9,7 @@ const OurSpeciality = ({features,title}) => {
   
  
   return (
-    <div className='our-speciality-container container' style={ title === "none" ? { backgroundColor : "#ffff",backgroundImage:"none"} : {} }>
+    <div id='benefits' className='our-speciality-container container' style={ title === "none" ? { backgroundColor : "#ffff",backgroundImage:"none"} : {} }>
       <div className='our-speciality-content maxscreenlimit'>
 
         {title == "none" ? "" : <div className='our-speciality-header'>

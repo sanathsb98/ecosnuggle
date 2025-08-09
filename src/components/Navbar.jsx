@@ -4,10 +4,13 @@ import logo from '../assets/logo.svg';
 import gift from '../assets/gift.svg';
 import ScrollBanner from './ScrollBanner';
 import burgerMenu from '../assets/burger-menu.svg';
-import closeIcon from '../assets/gift.svg'; // You'll need a close icon SVG
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import closeIcon from '../assets/close.svg'; // Assuming you have a close icon image
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+     const { hash } = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 
@@ -19,15 +22,25 @@ const Navbar = () => {
                     <div className='navbar-burger-menu' onClick={() => setIsMenuOpen(true)}>
                         <img src={burgerMenu} alt='burger-menu' className='burger-menu' />
                     </div>
-                    <Link to="/" className='navbar-left'>
+                    <NavLink to="/" className='navbar-left'>
                         <img src={logo} alt='logo' className='logo' />
-                    </Link>
+                    </NavLink>
                     <div className='navbar-center'>
                         <div className='navbar-links'>
-                            <Link to="/#new-drops" className='navbar-link'>New Drops</Link>
-                            <Link to="our-story" className='navbar-link'>Our Story</Link>
-                            <div className='navbar-link'>Benifits</div>
-                            <div className='navbar-link'>Contact</div>
+                           <a
+        href="/#new-drops"
+        className={`navbar-link ${hash === '#new-drops' ? 'active' : ''}`}
+      >
+        New Drops
+      </a>
+                            <NavLink to="our-story" className='navbar-link'>Our Story</NavLink>
+                            <a
+        href="/#benefits"
+        className={`navbar-link ${hash === '#benefits' ? 'active' : ''}`}
+      >
+        Benefits
+      </a>
+                            <NavLink to="/contact" className='navbar-link'>Contact</NavLink>
                             
                         </div>
                     </div>
@@ -48,7 +61,7 @@ const Navbar = () => {
                     <Link to="/#new-drops" className='mobile-link' onClick={() => setIsMenuOpen(false)}>New Drops</Link>
                     <Link to="our-story" className='mobile-link' onClick={() => setIsMenuOpen(false)}>Our Story</Link>
                     <div className='mobile-link' onClick={() => setIsMenuOpen(false)}>Benifits</div>
-                    <div className='mobile-link' onClick={() => setIsMenuOpen(false)}>Contact</div>
+                    <Link to="/contact" className='mobile-link' onClick={() => setIsMenuOpen(false)}>Contact</Link>
                 </div>
             </div>
         </div>

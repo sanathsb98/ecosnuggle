@@ -4,7 +4,7 @@ import product1 from '../assets/product1.png';
 import product2 from '../assets/product2.png';
 import product3 from '../assets/product3.png';
 
-const OurProducts = () => {
+const OurProducts = ({openModal}) => {
     const productData = [
         {
             image: product1,
@@ -42,7 +42,7 @@ const OurProducts = () => {
                                 <div className='product-box-price'>{product.price}</div>
                                 <div className='product-box-pill'>GET EXTRA OFF</div>
                             </div>
-                            <div className='product-box-btn'>Notify Me</div>
+                            <div onClick={()=>{openModal()}} className='product-box-btn'>Notify Me</div>
                         </div>
                     ))}
                 </div>

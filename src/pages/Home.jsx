@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 
 import homeBannerDesktop from '../assets/home-banner.png';
@@ -13,10 +13,13 @@ import ourstoryimage from '../assets/our-story-image.png';
 import echofriendly from '../assets/echo-friendly.svg';
 import babysafe from '../assets/baby-safe.svg';
 import wegiveback from '../assets/we-give-back.svg';
+import ContactModal from '../components/ContactModal';
 
 const Home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div  className="home-page-container">
+      {isModalOpen && <ContactModal onClose={() => setIsModalOpen(false)} />}
       <div className="home-banner-wrapper">
         <img src={homeBannerDesktop} alt="Home Banner Desktop" className="home-banner desktop" />
         <img src={homeBannerTablet} alt="Home Banner Tablet" className="home-banner tablet" />
@@ -34,13 +37,13 @@ const Home = () => {
                   newborn – gentle on the planet,<br />
                   perfect for your baby. Coming Soon!
                 </p>
-                <button className="notify-button">Notify me</button>
+                <button onClick={()=>{setIsModalOpen(true)}} className="notify-button">Notify me</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <OurProducts/>
+      <OurProducts openModal={()=>{setIsModalOpen(true)}}/>
       <OurSpeciality
       title=""
       features={[

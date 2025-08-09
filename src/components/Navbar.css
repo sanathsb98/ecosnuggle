@@ -79,8 +79,16 @@
     display: none;
     flex-direction: column;
     padding: 40px 20px;
+    background-image: url('../assets/overlay.png');
 }
 
+.navbar-link.active {
+  color: #222d17; /* or your theme's blue color */
+
+}
+.navbar-link:hover{
+    text-decoration: none;
+}
 .mobile-menu.open {
     transform: translateY(0%);
 }
@@ -91,8 +99,8 @@
 }
 
 .close-icon {
-    width: 24px;
-    height: 24px;
+   width: 100%;
+   max-width: 42px;
     cursor: pointer;
 }
 

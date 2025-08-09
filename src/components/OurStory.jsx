@@ -2,10 +2,11 @@ import React from 'react';
 import './OurStory.css';
 import ourstoryimage from '../assets/our-story-image.png';
 import curvedline from '../assets/curved-line.svg';
+import { Link } from 'react-router-dom';
 
 const OurStory = ({title,description,image,buttonText}) => {
     return (
-        <div className='our-story-container container' style={title == "Our Mission" ? { backgroundColor: "#F3F2F2" } : {}}>
+        <div id="mission" className='our-story-container container' style={title == "Our Mission" ? { backgroundColor: "#F3F2F2" } : {}}>
             <div className='our-story-section maxscreenlimit'>
                  <div className='our-story-title mobtitle'>{title}</div>
                  <div className='curved-line'>
@@ -20,7 +21,7 @@ const OurStory = ({title,description,image,buttonText}) => {
                         className='our-story-description'
                         dangerouslySetInnerHTML={{ __html: description }}
                     />
-                    {buttonText && <div className='read-story-btn'>{buttonText}</div> }
+                    {buttonText && <Link to="/our-story" className='read-story-btn'>{buttonText}</Link> }
                     
                 </div>
             </div>

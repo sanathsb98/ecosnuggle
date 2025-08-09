@@ -6,8 +6,11 @@ import youtubeIcon from '../assets/youtube.svg';
 import copyrightIcon from '../assets/copyright.svg';
 import logo from '../assets/logo.svg';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
+        const { hash } = useLocation();
     return (
         <footer className='footer-section'>
             <div className='footer-container container'>
@@ -24,17 +27,32 @@ const Footer = () => {
 
                         <div className='footer-column'>
                             <h4 className='footer-heading'>QUICK LINKS</h4>
-                            <Link to="/#new-drops" className='footer-link'>New Drops</Link>
-                            <Link to="/#our-story" className='footer-link'>Our Story</Link>
-                            <Link to="/#benefits" className='footer-link'>Benefits</Link>
-                            <Link to="/#contact" className='footer-link'>Contact</Link>
+                            <a
+                                href="/#new-drops"
+                                className={`navbar-link ${hash === '#new-drops' ? 'active' : ''}`}
+                            >
+                                New Drops
+                            </a>
+                            <NavLink to="/our-story" className='footer-link'>Our Story</NavLink>
+                              <a
+                                href="/#benefits"
+                                className={`navbar-link ${hash === '#benefits' ? 'active' : ''}`}
+                            >
+                                Benefits
+                            </a>
+                            <NavLink to="/contact" className='footer-link'>Contact</NavLink>
                         </div>
 
                         <div className='footer-column'>
                             <h4 className='footer-heading'>ABOUT US</h4>
-                            <Link to="/our-story" className='footer-link'>Our Story</Link>
-                            <Link to="/terms" className='footer-link'>Terms & Conditions</Link>
-                            <Link to="/#mission" className='footer-link'>Mission</Link>
+                            <NavLink to="/our-story" className='footer-link'>Our Story</NavLink>
+                            <NavLink to="/terms" className='footer-link'>Terms & Conditions</NavLink>
+                             <a
+                                href="/#mission"
+                                className={`navbar-link ${hash === '#mission' ? 'active' : ''}`}
+                            >
+                                Mission
+                            </a>
                         </div>
 
                         <div className='footer-social'>
