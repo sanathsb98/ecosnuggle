@@ -1,6 +1,7 @@
 .home-page-container {
   width: 100%;
-  margin-top: 122px;
+  margin-top: 80px; 
+  /* 122 before */
 }
 
 /* Banner wrapper to hold image and overlay */
@@ -89,7 +90,7 @@
   padding: 8px 16px;
   width: fit-content;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
   border: none;
   transition: background-color 0.3s ease;
   font-size: 24px;

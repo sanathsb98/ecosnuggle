@@ -5,7 +5,6 @@ import smileEmoji from '../assets/smile-emoji.svg';
 const items = [
   'LAUNCHING SOON',
   'GET 10% EXTRA OFF',
-  'CONTACT',
 ];
 
 const ScrollBanner = () => {

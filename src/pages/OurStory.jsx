@@ -32,17 +32,17 @@ const OurStory = () => {
       title = "none"
        features={[
               {
-                        image: affordable,
+                        image: ecofriendly,
                         title: '100% Eco-Friendly',
                         description: 'We chose eco-friendly, sustainable materials - because we care about the world our children will grow up in.',
                     },
                     {
                         image: premiumquality,
                         title: 'Premium Quality',
-                        description: 'We focused on premium quality - because every baby deserves restful sleep.',
+                        description: 'We focused on premium quality – because every baby deserves restful, peaceful sleep always.',
                     },
                     {
-                        image: ecofriendly,
+                        image: affordable,
                         title: 'Affordable for All',
                         description: 'We chose eco-friendly, sustainable materials - because we care about the world our children will grow up in.',
                     }

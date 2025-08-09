@@ -21,11 +21,14 @@
     color: var(--primary-color);
 }
 .ourstory-des{
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 400;
     text-align: center;
     line-height: 150%;
     color: var(--text-color);
+}
+.ourstory-image{
+    width: 100%;
 }
 .ourstory-image-img{
     width: 100%;

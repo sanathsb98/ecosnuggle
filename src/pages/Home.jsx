@@ -64,7 +64,7 @@ const Home = () => {
               }
       ]}      />
       <OurStory
-       title="Born from Sleepless Nights, Built with Heart"
+       title="Spun from sleepless nights, forever weaved in our hearts"
        description="We’re two sisters - and moms - who turned our late-night struggles into something meaningful.<br/><br/>
        Eco Snuggle was created to bring breathable, skin-loving, and eco-conscious swaddles to families like yours. Each blanket is thoughtfully made for your baby’s comfort-and another baby’s care."
        image={ourstoryimage}

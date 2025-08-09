@@ -27,14 +27,14 @@
 }
 
 .reel-section-description {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 400;
   color: var(--text-color);
 }
 
 .reel-section-button {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
   background-color: var(--primary-color);
   color: #fff;
   padding: 8px 16px;

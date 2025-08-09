@@ -2,7 +2,7 @@
     background-color: #f8f8f8;
     color: #2e2e2e;
     font-family: "Montserrat", sans-serif;
-    padding: 120px 60px 60px 60px;
+    padding: 120px 60px 30px 60px;
     width: 100%;
 }
 .footer-container{
@@ -60,6 +60,7 @@ flex-direction: row;
     text-decoration: none;
     margin-bottom: 8px;
     transition: color 0.2s ease;
+    margin-top: -10px;
 }
 
 .footer-link:hover {
@@ -93,7 +94,7 @@ flex-direction: row;
 
 .footer-bottom {
     border-top: 1px solid #ccc;
-    padding: 48px 0;
+    padding: 38px 0;
     text-align: center;
     font-size: 16px;
     color: var(--primary-color);

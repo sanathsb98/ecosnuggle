@@ -29,14 +29,14 @@ const Footer = () => {
                             <h4 className='footer-heading'>QUICK LINKS</h4>
                             <a
                                 href="/#new-drops"
-                                className={`navbar-link ${hash === '#new-drops' ? 'active' : ''}`}
+                                className={`footer-link ${hash === '#new-drops' ? 'active' : ''}`}
                             >
                                 New Drops
                             </a>
                             <NavLink to="/our-story" className='footer-link'>Our Story</NavLink>
                               <a
                                 href="/#benefits"
-                                className={`navbar-link ${hash === '#benefits' ? 'active' : ''}`}
+                                className={`footer-link ${hash === '#benefits' ? 'active' : ''}`}
                             >
                                 Benefits
                             </a>
@@ -49,7 +49,7 @@ const Footer = () => {
                             <NavLink to="/terms" className='footer-link'>Terms & Conditions</NavLink>
                              <a
                                 href="/#mission"
-                                className={`navbar-link ${hash === '#mission' ? 'active' : ''}`}
+                                className={`footer-link ${hash === '#mission' ? 'active' : ''}`}
                             >
                                 Mission
                             </a>
