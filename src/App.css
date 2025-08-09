@@ -26,6 +26,9 @@
   --text-color:#455F2C;
   --pill-color:#B3767C;
 }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
 @media screen and (max-width: 550px) {
 .container{
