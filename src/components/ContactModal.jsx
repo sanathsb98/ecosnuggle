@@ -69,7 +69,7 @@ const ContactModal = ({ onClose }) => {
         {/* Banner */}
         <div className='contact-modal-banner'>
           <img onClick={onClose} src={closeicon} alt='Close' className='contact-modal-close-icon' />
-          <div className='contact-modal-title'>Be the First to Know! With a Special 10% Discount!</div>
+          <div className='contact-modal-title'>Be the First to Know!<br/> With a Special 10% Discount!</div>
           <div className='contact-modal-description'>
             Get early access and an exclusive 10% launch discount. We’ll notify you by email and WhatsApp.
           </div>

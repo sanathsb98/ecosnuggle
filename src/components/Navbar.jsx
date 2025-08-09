@@ -8,13 +8,17 @@ import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import closeIcon from '../assets/close.svg'; // Assuming you have a close icon image
 import { useLocation } from 'react-router-dom';
+import ContactModal from './ContactModal'; // Assuming you have a ContactModal component
 
 const Navbar = () => {
      const { hash } = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
 
     return (
+        <>
+           {isModalOpen && <ContactModal onClose={() => setIsModalOpen(false)} />}
         <div className='navbar-section'>
             <ScrollBanner />
             <div className='navbar-container container'>
@@ -44,7 +48,7 @@ const Navbar = () => {
                             
                         </div>
                     </div>
-                    <div className='navbar-right'>
+                    <div onClick={()=>{setIsModalOpen(true)}} className='navbar-right'>
                         <img src={gift} alt='gift-logo' className='gift-logo' />
                     </div>
                 </div>
@@ -65,6 +69,7 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
