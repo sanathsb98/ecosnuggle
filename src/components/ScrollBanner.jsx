@@ -17,7 +17,7 @@ const ScrollBanner = () => {
           {repeatedItems.map((item, idx) => (
             <span key={idx} className="scroll-banner-item">
               <img src={smileEmoji} alt="smile" className="smile-emoji" />
-              {item}&nbsp;&nbsp;&nbsp;
+              {item}&nbsp;&nbsp;
             </span>
           ))}
         </div>
@@ -26,7 +26,7 @@ const ScrollBanner = () => {
           {repeatedItems.map((item, idx) => (
             <span key={`dup-${idx}`} className="scroll-banner-item">
               <img src={smileEmoji} alt="smile" className="smile-emoji" />
-              {item}&nbsp;&nbsp;&nbsp;
+              {item}&nbsp;&nbsp;
             </span>
           ))}
         </div>
