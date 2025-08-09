@@ -35,7 +35,7 @@ const FaqSection = () => {
   return (
     <div className='faq-container container'>
       <div className='faq-section maxscreenlimit'>
-        <h2 className='faq-title'>FAQs</h2>
+        <h2 className='faqtitle'>FAQs</h2>
         <div className='faq-line'></div>
         <div className='faq-questions-section'>
           {faqs.map((item, index) => (
