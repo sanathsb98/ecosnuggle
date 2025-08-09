@@ -46,6 +46,10 @@
   text-align: center;
   gap: 8px;
 }
+.reel-section-button:hover {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+}
 
 .reel-section-content {
   display: flex;

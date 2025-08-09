@@ -1,8 +1,8 @@
 import emailjs from 'emailjs-com';
 
-const SERVICE_ID = 'service_tct5vbq';
-const TEMPLATE_ID = 'template_gvh4uno';
-const PUBLIC_KEY = '8EdURfeqzoKtn-254';
+const SERVICE_ID = 'service_1nq66hu';
+const TEMPLATE_ID = 'template_diu5nwm';
+const PUBLIC_KEY = 'l_mVpIfVCAxuGZzZn';
 
 export const sendContactEmail = async (formData) => {
   try {
