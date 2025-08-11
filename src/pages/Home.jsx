@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef, useEffect } from 'react';
 import './Home.css';
 
 import homeBannerDesktop from '../assets/home-banner.png';
@@ -14,11 +14,80 @@ import echofriendly from '../assets/echo-friendly.svg';
 import babysafe from '../assets/baby-safe.svg';
 import wegiveback from '../assets/we-give-back.svg';
 import ContactModal from '../components/ContactModal';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(()=>{
+  const title = sectionRef.current.querySelector('.home-banner-title');
+  const description = sectionRef.current.querySelector('.home-banner-des');
+  const button = sectionRef.current.querySelector('.notify-button');
+
+    gsap.fromTo(
+      title,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+   gsap.fromTo(
+      description,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+     gsap.fromTo(
+      button,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+
+ 
+  },[]);
+
   return (
-    <div  className="home-page-container">
+    <div  className="home-page-container" ref={sectionRef}>
       {isModalOpen && <ContactModal onClose={() => setIsModalOpen(false)} />}
       <div className="home-banner-wrapper">
         <img src={homeBannerDesktop} alt="Home Banner Desktop" className="home-banner desktop" />

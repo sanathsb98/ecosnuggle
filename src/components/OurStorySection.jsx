@@ -1,13 +1,98 @@
-import React from 'react';
+import { useEffect,useRef } from 'react';
 import './OurStorySection.css';
 import motherWithBaby from '../assets/mother-with-baby.png';
 import motherbabytab from '../assets/mother-baby-tab.png';
 import motherbabymob from '../assets/mother-baby-mobile.png';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; 
+gsap.registerPlugin(ScrollTrigger);
 
 
 const OurStorySection = () => {
+
+    const sectionRef = useRef(null);
+    useEffect(()=>{
+        const titleElement = sectionRef.current.querySelector('.ourstory-title');
+        const descriptionElement = sectionRef.current.querySelector('.ourstory-des');
+        const imageElement = sectionRef.current.querySelector('.ourstory-image img');
+        const buttonElement = sectionRef.current.querySelector('.read-story-btn');
+
+         gsap.fromTo(
+      titleElement,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+     gsap.fromTo(
+      descriptionElement,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+     gsap.fromTo(
+      buttonElement,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+       gsap.fromTo(
+      imageElement,
+      { opacity: 0, y: 60 }, // Start invisible & lower
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.3, // Delay between boxes
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%', // When section is near viewport
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+
+    },[])
+    
     return (
-        <div className='ourstory-sec-container container'>
+        <div ref={sectionRef} className='ourstory-sec-container container'>
             <div className='ourstorysection maxscreenlimit'>
                 <div className='ourstory-pill'>Our Story</div>
                 <div className='ourstory-titledes'>

@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect,useRef } from 'react';
 import './Contact.css';
 import mailicon from '../assets/mailicon.svg';
 import { sendContactEmail } from '../services/emailService';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; 
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+
+  const sectionRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -63,9 +68,89 @@ const Contact = () => {
     setLoading(false);
   };
 
+  useEffect(()=>{
+    const contactpill = sectionRef.current.querySelector('.contact-pill');
+    const titleElement = sectionRef.current.querySelector('.contact-title');
+    const descriptionElement = sectionRef.current.querySelector('.contact-description');
+    const contactform = sectionRef.current.querySelector('.contact-form');
+ 
+
+       gsap.fromTo(
+      contactpill,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+       gsap.fromTo(
+      titleElement,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+       gsap.fromTo(
+      descriptionElement,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+     gsap.fromTo(
+      contactform,
+      { opacity: 0, y: 60 }, // Start invisible & lower
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.3, // Delay between boxes
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%', // When section is near viewport
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+  },[])
+
   return (
     <>
-      <div className='home-page-container container'>
+      <div ref={sectionRef} className='home-page-container container'>
         <div className='contact-page-section maxscreenlimit'>
 
           {/* Header */}

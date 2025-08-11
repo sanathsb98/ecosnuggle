@@ -1,18 +1,87 @@
-import React, { useEffect, useRef } from 'react';
+import React, { use, useEffect, useRef } from 'react';
 import './ReelSection.css';
 import story1 from '../assets/story1.png';
 import story2 from '../assets/story2.png';
 import story3 from '../assets/story3.png';
 import instagramlogo from '../assets/instagram-logo.svg';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; 
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ReelSection = () => {
   const scrollRef = useRef(null);
+  const sectionRef = useRef(null);
 
   const stories = [
     { story: story1, link: 'https://www.instagram.com/reel/DMxcToasa6d/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' },
     { story: story2, link: 'https://www.instagram.com/reel/DMnlVcSsdlU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' },
     { story: story3, link: 'https://www.instagram.com/reel/DLsS_JzSKPK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' },
   ];
+
+  useEffect(() => {
+    const title = sectionRef.current.querySelector('.reel-section-title');
+    const description = sectionRef.current.querySelector('.reel-section-description');
+    const button = sectionRef.current.querySelector('.reel-section-button');
+
+     gsap.fromTo(
+      title,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+     gsap.fromTo(
+      description,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+     gsap.fromTo(
+      button,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+
+
+
+  }, [])
 
   useEffect(() => {
     const container = scrollRef.current;
@@ -44,7 +113,7 @@ const ReelSection = () => {
   }, []);
 
   return (
-    <div className="reel-section-container container">
+    <div ref={sectionRef} className="reel-section-container container">
       <div className="reel-section maxscreenlimit">
         <div className="reel-titledes">
           <div className="reel-section-title">See the Snuggle, Frame by Frame</div>

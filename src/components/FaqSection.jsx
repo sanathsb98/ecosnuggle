@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect,useRef } from 'react';
 import './FaqSection.css';
 import expandicon from '../assets/expand-icon.svg';
+
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
   {
@@ -27,13 +31,75 @@ const faqs = [
 
 const FaqSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const sectionRef = useRef(null);
 
   const toggleFAQ = (index) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+useEffect(()=>{
+  const faqQuestions = sectionRef.current.querySelectorAll('.faq-question');
+  const title = sectionRef.current.querySelector('.faqtitle');
+  const answers = sectionRef.current.querySelectorAll('.faq-answer');
+
+   gsap.fromTo(
+      title,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+     gsap.fromTo(
+      faqQuestions,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+     gsap.fromTo(
+      answers,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: 'power2.out',
+        stagger: 0.5,
+        delay: 0.3, // starts after card fade begins
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+},[])
+
   return (
-    <div className='faq-container container'>
+    <div ref={sectionRef} className='faq-container container'>
       <div className='faq-section maxscreenlimit'>
         <h2 className='faqtitle'>FAQs</h2>
         <div className='faq-line'></div>
