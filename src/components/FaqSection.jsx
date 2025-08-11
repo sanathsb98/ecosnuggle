@@ -66,7 +66,7 @@ useEffect(()=>{
       {
         opacity: 1,
         y: 0,
-        duration: 1.4,
+        duration: 0.2,
         ease: 'power2.out',
         stagger: 0.5,
         delay: 0.3, // starts after card fade begins
@@ -84,7 +84,7 @@ useEffect(()=>{
       {
         opacity: 1,
         y: 0,
-        duration: 1.4,
+        duration: 0.2,
         ease: 'power2.out',
         stagger: 0.5,
         delay: 0.3, // starts after card fade begins

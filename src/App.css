@@ -3,8 +3,12 @@
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
- 
 }
+html {
+  -webkit-text-size-adjust: 100%; /* Prevents iOS Safari from resizing text */
+  text-size-adjust: 100%;
+}
+
 .container{
   width: 100%;
   display: flex;
