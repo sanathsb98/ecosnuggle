@@ -19,6 +19,7 @@ import gsap from 'gsap';
 import desktopbaby from '../assets/desktop-baby.mp4';
 import mobilebaby from '../assets/mobile-baby.mp4';
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -98,12 +99,11 @@ const Home = () => {
         {/* <img src={homeBannerMobile} alt="Home Banner Mobile" className="home-banner mobile" /> */}
 
         <video autoPlay loop muted className="home-banner desktop">
-          <source src={desktopbaby} type="video/mp4" />
-          Your browser does not support the video tag.
+          <source src={desktopbaby} type="video/mp4" />     
         </video>
+
         <video autoPlay loop muted className="home-banner mobile">
           <source src={mobilebaby} type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
 
         <div className="home-overlay">
