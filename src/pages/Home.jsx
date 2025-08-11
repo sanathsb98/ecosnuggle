@@ -16,6 +16,7 @@ import wegiveback from '../assets/we-give-back.svg';
 import ContactModal from '../components/ContactModal';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
+import desktopbaby from '../assets/desktop-baby.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,9 +91,14 @@ const Home = () => {
     <div  className="home-page-container" ref={sectionRef}>
       {isModalOpen && <ContactModal onClose={() => setIsModalOpen(false)} />}
       <div className="home-banner-wrapper">
-        <img src={homeBannerDesktop} alt="Home Banner Desktop" className="home-banner desktop" />
+        {/* <img src={homeBannerDesktop} alt="Home Banner Desktop" className="home-banner desktop" /> */}
         <img src={homeBannerTablet} alt="Home Banner Tablet" className="home-banner tablet" />
         <img src={homeBannerMobile} alt="Home Banner Mobile" className="home-banner mobile" />
+
+        <video autoPlay loop muted className="home-banner desktop">
+          <source src={desktopbaby} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
         <div className="home-overlay">
           <div className="container">
