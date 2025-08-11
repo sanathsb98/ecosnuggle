@@ -4,7 +4,7 @@ import './TermsConditions.css';
 const TermsConditions = () => {
   return (
     <div className="home-page-container">
-      <div className="container">
+      <div className="terms-page container page">
         <div className="maxscreenlimit">
           <h1>Terms &amp; Conditions</h1>
           <p>Welcome to EcoSnuggle Baby Clothing! By accessing and using our website, you agree to the following terms and conditions. Please read them carefully before making a purchase.</p>

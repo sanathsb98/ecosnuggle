@@ -3,6 +3,8 @@ import './OurStory.css';
 import ourstoryimage from '../assets/our-story-image.png';
 import curvedline from '../assets/curved-line.svg';
 import { Link } from 'react-router-dom';
+import runnerinner from '../assets/runner-inner.svg';
+import runnerouter from '../assets/runner-outer.svg';
 
 const OurStory = ({title,description,image,buttonText}) => {
     return (
@@ -13,7 +15,14 @@ const OurStory = ({title,description,image,buttonText}) => {
                     <img src={curvedline} alt='Curved Line' className='curved-line-img' />
                  </div>
                 <div className='our-story-image'>
-                    <img src={image} alt='Our Story' className='our-story-image-img' />
+                    <img src={image} alt='Our Story' className='our-story-image-img xx' />
+
+                    <div className='runner-section'>
+                       <img src={runnerinner} alt='Runner Inner' className='runner-inner' />
+                          <img src={runnerouter} alt='Runner Outer' className='runner-outer' />
+                    </div>
+                    
+
                 </div>
                 <div className='our-story-content'>
                     <div className='our-story-title desktitle'>{title}</div>

@@ -64,7 +64,7 @@ const Navbar = () => {
                      <Link to="/" className='mobile-link' onClick={() => setIsMenuOpen(false)}>Home</Link>
                     <Link to="/#new-drops" className='mobile-link' onClick={() => setIsMenuOpen(false)}>New Drops</Link>
                     <Link to="our-story" className='mobile-link' onClick={() => setIsMenuOpen(false)}>Our Story</Link>
-                    <Link to="/#benefits" className='mobile-link' onClick={() => setIsMenuOpen(false)}>Benifits</Link>
+                    <Link to="/#benefits" className='mobile-link' onClick={() => setIsMenuOpen(false)}>Benefits</Link>
                     <Link to="/contact" className='mobile-link' onClick={() => setIsMenuOpen(false)}>Contact</Link>
                 </div>
             </div>

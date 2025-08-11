@@ -95,4 +95,8 @@
   .faq-container{
     padding: 60px 20px;
   }
+  .expand-icon {
+  width: 18px;
+  height: 18px;
+}
 }
