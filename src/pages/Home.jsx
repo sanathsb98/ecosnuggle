@@ -20,6 +20,7 @@ import desktopbaby from '../assets/desktop-baby.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const sectionRef = useRef(null);
